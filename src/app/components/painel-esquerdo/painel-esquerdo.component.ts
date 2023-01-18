@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { faGuitar, faHome, faMusic, faSearch } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'painel-esquerdo',
@@ -7,4 +8,15 @@ import { Component } from '@angular/core';
 })
 export class PainelEsquerdoComponent {
 
+  //icons
+  homeIcon = faHome;
+  pesquisarIcon = faSearch;
+  artistaIcon = faGuitar;
+  playList = faMusic;
+
+  menuSelecionado = 'Home';
+
+  botaoClick(botao: string) {
+    this.menuSelecionado = botao;
+  }
 }

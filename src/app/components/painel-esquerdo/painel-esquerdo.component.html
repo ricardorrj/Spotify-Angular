@@ -2,6 +2,18 @@
     <div class="image-container flex flex-center">
         <img src="assets/images/spotify-logo.png" alt="logo">
     </div>
+
+    <div class="menu-container flex opcoes">
+        <botao-menu [descricaoButton]="'Home'" (click)="botaoClick('Home')" [selecionado]="menuSelecionado === 'Home'"> 
+            <fa-icon [icon]="homeIcon"></fa-icon>
+        </botao-menu> 
+        <botao-menu [descricaoButton]="'Pesquisar'" (click)="botaoClick('Pesquisar')" [selecionado]="menuSelecionado === 'Pesquisar'"> 
+            <fa-icon [icon]="pesquisarIcon"></fa-icon>
+        </botao-menu> 
+        <botao-menu [descricaoButton]="'Artistas'" (click)="botaoClick('Artistas')" [selecionado]="menuSelecionado === 'Artistas'"> 
+            <fa-icon [icon]="artistaIcon"></fa-icon>
+        </botao-menu> 
+    </div>
 </div>
 
 <div class="usuario-info">
