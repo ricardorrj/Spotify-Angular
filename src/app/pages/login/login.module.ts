@@ -3,7 +3,6 @@ import { CommonModule } from '@angular/common';
 import { LoginComponent } from './login.component';
 import { RouterModule } from '@angular/router';
 import { LoginRotas } from './login.routes';
-import { SpotifyService } from 'src/app/services/spotify-service.service';
 
 
 
@@ -14,9 +13,6 @@ import { SpotifyService } from 'src/app/services/spotify-service.service';
   imports: [
     CommonModule,
     RouterModule.forChild(LoginRotas)
-  ],
-  providers: [
-    SpotifyService
   ]
 })
 export class LoginModule { }

@@ -30,7 +30,6 @@ export class SpotifyService {
     try {
       this.definirAccessToken(token);
       await this._obterSpotifyUsuario();
-      console.log('usuario', this.usuario);
       return !!this.usuario;
     } catch(e) {
       return false;

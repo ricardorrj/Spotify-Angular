@@ -20,7 +20,7 @@ export class PainelEsquerdoComponent implements OnInit{
 
   playlists: IPlaylist[] = [];
 
-  constructor(private spotifyService: SpotifyService) { }
+  constructor(private _spotifyService: SpotifyService) { }
 
   ngOnInit(): void {
     this.buscarPlaylists();
@@ -31,6 +31,6 @@ export class PainelEsquerdoComponent implements OnInit{
   }
 
   async buscarPlaylists() {
-    this.playlists = await this.spotifyService.buscarPlaylistUsuario();
+    this.playlists = await this._spotifyService.buscarPlaylistUsuario();
   }
 }
