@@ -12,7 +12,7 @@ export class PainelEsquerdoComponent {
   homeIcon = faHome;
   pesquisarIcon = faSearch;
   artistaIcon = faGuitar;
-  playList = faMusic;
+  playListIcon = faMusic;
 
   menuSelecionado = 'Home';
 
