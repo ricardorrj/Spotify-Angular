@@ -5,7 +5,7 @@ export function SpotifyUserParaUsuario(user: SpotifyApi.CurrentUsersProfileRespo
     return {
         id: user.id,
         nome: user.display_name,
-        imagemUrl: user.images.pop().url
+        imagemUrl: user.images?.length > 0 ? user.images.pop().url : null
     }
 }
 
@@ -13,6 +13,6 @@ export function SpotifyPlaylistParaPlaylist(playlist: SpotifyApi.PlaylistObjectS
     return {
         id: playlist.id,
         nome: playlist.name,
-        imagemUrl: playlist.images.pop().url
+        imagemUrl: playlist.images?.length > 0 ? playlist.images.pop().url : null
     }
 } 

@@ -52,8 +52,14 @@ $m-entre-menus: 10px;
                 color: $preto-transparent-30;
             }
 
-            .playslist-scroll {
+            .playlist-scroll {
                 width: 100%;
+                max-height: 50vh;
+                overflow-y: auto;
+
+                &::-webkit-scrollbar{
+                    display: none; /* não demonstrar em tela a barra de scroll */
+                }
 
                 * {
                     margin-bottom: $m-entre-menus;

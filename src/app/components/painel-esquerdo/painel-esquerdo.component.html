@@ -21,21 +21,12 @@
         </span>
 
         <div class="playlist-scroll">
-            <botao-menu [descricaoButton]="'p1'" (click)="botaoClick('p1')" [selecionado]="menuSelecionado === 'p1'"> 
+            <botao-menu *ngFor="let playlist of playlists" 
+                        [descricaoButton]="playlist?.nome" 
+                        (click)="botaoClick(playlist?.id)" 
+                        [selecionado]="menuSelecionado === playlist?.id"> 
                 <fa-icon [icon]="playListIcon"></fa-icon>
-            </botao-menu> 
-        </div>
-        
-        <div class="playlist-scroll">
-            <botao-menu [descricaoButton]="'p1'" (click)="botaoClick('p1')" [selecionado]="menuSelecionado === 'p1'"> 
-                <fa-icon [icon]="playListIcon"></fa-icon>
-            </botao-menu> 
-        </div>
-
-        <div class="playlist-scroll">
-            <botao-menu [descricaoButton]="'p1'" (click)="botaoClick('p1')" [selecionado]="menuSelecionado === 'p1'"> 
-                <fa-icon [icon]="playListIcon"></fa-icon>
-            </botao-menu> 
+            </botao-menu>
         </div>
     </div>
 </div>
